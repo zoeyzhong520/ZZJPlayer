@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D802D7C8204458DD00B415BB /* ZZJAVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802D7C7204458DD00B415BB /* ZZJAVPlayer.swift */; };
+		D802D7CA2044591500B415BB /* VariousEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802D7C92044591500B415BB /* VariousEnums.swift */; };
 		D8A62DEE2033D35700A14446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62DED2033D35700A14446 /* AppDelegate.swift */; };
 		D8A62DF02033D35700A14446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62DEF2033D35700A14446 /* ViewController.swift */; };
 		D8A62DF32033D35700A14446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A62DF12033D35700A14446 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D802D7C7204458DD00B415BB /* ZZJAVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZJAVPlayer.swift; sourceTree = "<group>"; };
+		D802D7C92044591500B415BB /* VariousEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariousEnums.swift; sourceTree = "<group>"; };
 		D8A62DEA2033D35700A14446 /* ZZJPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZJPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A62DED2033D35700A14446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8A62DEF2033D35700A14446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D8B90A9B203AF06800DC7446 /* BaseView.swift */,
+				D802D7C7204458DD00B415BB /* ZZJAVPlayer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A62E212033D44D00A14446 /* common.swift */,
+				D802D7C92044591500B415BB /* VariousEnums.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -325,9 +331,11 @@
 			files = (
 				D8A62DF02033D35700A14446 /* ViewController.swift in Sources */,
 				D8B90A98203AEE7E00DC7446 /* BaseViewController.swift in Sources */,
+				D802D7C8204458DD00B415BB /* ZZJAVPlayer.swift in Sources */,
 				D8A62DEE2033D35700A14446 /* AppDelegate.swift in Sources */,
 				D8B90A9C203AF06800DC7446 /* BaseView.swift in Sources */,
 				D8A62E222033D44D00A14446 /* common.swift in Sources */,
+				D802D7CA2044591500B415BB /* VariousEnums.swift in Sources */,
 				D8B90A9A203AF05800DC7446 /* BaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
