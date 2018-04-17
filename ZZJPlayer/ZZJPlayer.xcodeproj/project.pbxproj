@@ -17,9 +17,8 @@
 		D8A62E032033D35700A14446 /* ZZJPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62E022033D35700A14446 /* ZZJPlayerTests.swift */; };
 		D8A62E0E2033D35700A14446 /* ZZJPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62E0D2033D35700A14446 /* ZZJPlayerUITests.swift */; };
 		D8A62E222033D44D00A14446 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62E212033D44D00A14446 /* common.swift */; };
-		D8B90A98203AEE7E00DC7446 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B90A97203AEE7E00DC7446 /* BaseViewController.swift */; };
-		D8B90A9A203AF05800DC7446 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B90A99203AF05800DC7446 /* BaseModel.swift */; };
-		D8B90A9C203AF06800DC7446 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B90A9B203AF06800DC7446 /* BaseView.swift */; };
+		D8B90A98203AEE7E00DC7446 /* ZZJPlayerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B90A97203AEE7E00DC7446 /* ZZJPlayerBaseViewController.swift */; };
+		D8B90A9A203AF05800DC7446 /* ZZJPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B90A99203AF05800DC7446 /* ZZJPlayerModel.swift */; };
 		D8B90A9E203AF0BB00DC7446 /* BaseJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D8B90A9D203AF0BB00DC7446 /* BaseJSON.json */; };
 /* End PBXBuildFile section */
 
@@ -57,9 +56,8 @@
 		D8A62E0D2033D35700A14446 /* ZZJPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZJPlayerUITests.swift; sourceTree = "<group>"; };
 		D8A62E0F2033D35700A14446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8A62E212033D44D00A14446 /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
-		D8B90A97203AEE7E00DC7446 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		D8B90A99203AF05800DC7446 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		D8B90A9B203AF06800DC7446 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D8B90A97203AEE7E00DC7446 /* ZZJPlayerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZJPlayerBaseViewController.swift; sourceTree = "<group>"; };
+		D8B90A99203AF05800DC7446 /* ZZJPlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZJPlayerModel.swift; sourceTree = "<group>"; };
 		D8B90A9D203AF0BB00DC7446 /* BaseJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BaseJSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +161,7 @@
 		D8A62E1D2033D43D00A14446 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D8B90A97203AEE7E00DC7446 /* BaseViewController.swift */,
+				D8B90A97203AEE7E00DC7446 /* ZZJPlayerBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,7 +169,7 @@
 		D8A62E1E2033D43D00A14446 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D8B90A99203AF05800DC7446 /* BaseModel.swift */,
+				D8B90A99203AF05800DC7446 /* ZZJPlayerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,7 +177,6 @@
 		D8A62E1F2033D43D00A14446 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D8B90A9B203AF06800DC7446 /* BaseView.swift */,
 				D802D7C7204458DD00B415BB /* ZZJAVPlayer.swift */,
 			);
 			path = View;
@@ -330,13 +327,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A62DF02033D35700A14446 /* ViewController.swift in Sources */,
-				D8B90A98203AEE7E00DC7446 /* BaseViewController.swift in Sources */,
+				D8B90A98203AEE7E00DC7446 /* ZZJPlayerBaseViewController.swift in Sources */,
 				D802D7C8204458DD00B415BB /* ZZJAVPlayer.swift in Sources */,
 				D8A62DEE2033D35700A14446 /* AppDelegate.swift in Sources */,
-				D8B90A9C203AF06800DC7446 /* BaseView.swift in Sources */,
 				D8A62E222033D44D00A14446 /* common.swift in Sources */,
 				D802D7CA2044591500B415BB /* VariousEnums.swift in Sources */,
-				D8B90A9A203AF05800DC7446 /* BaseModel.swift in Sources */,
+				D8B90A9A203AF05800DC7446 /* ZZJPlayerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

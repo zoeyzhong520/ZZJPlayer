@@ -1,5 +1,5 @@
 //
-//  BaseModel.swift
+//  ZZJPlayerModel.swift
 //  ZZJPlayer
 //
 //  Created by ZHONG ZHAOJUN on 2018/2/19.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class BaseModel: NSObject {
+class ZZJPlayerModel: NSObject {
 
 }

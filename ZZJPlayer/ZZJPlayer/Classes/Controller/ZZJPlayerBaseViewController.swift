@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  ZZJPlayerBaseViewController.swift
 //  ZZJPlayer
 //
 //  Created by ZHONG ZHAOJUN on 2018/2/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class ZZJPlayerBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
