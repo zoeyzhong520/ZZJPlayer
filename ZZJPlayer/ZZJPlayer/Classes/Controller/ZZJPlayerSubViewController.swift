@@ -10,6 +10,15 @@ import UIKit
 
 class ZZJPlayerSubViewController: ZZJPlayerBaseViewController {
 
+    lazy var subView: ZZJAVPlayerSubView = {
+        let subView = ZZJAVPlayerSubView(frame: CGRect(x: 0, y: NavigationBarHeight + StatusBarHeight, width: screenWidth, height: screenHeight - (NavigationBarHeight + StatusBarHeight)))
+        subView.delegate = self
+        return subView
+    }()
+    
+    ///视频网址
+    fileprivate var videoURL:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setPage()
@@ -40,10 +49,28 @@ extension ZZJPlayerSubViewController {
     fileprivate func setPage() {
         
         self.title = "根视图"
+        self.addSubView()
+    }
+    
+    ///addSubView
+    fileprivate func addSubView() {
+        
+        self.view.addSubview(self.subView)
+        self.subView.model = ZZJAVPlayerModel.configModel(localVideoURLArray: ["笑一笑 ~シャオイーシャオ!~ -- ももいろクローバーZ", "トキトキメキメキ"], netVideoURLArray: [TestVideoURL])
     }
 }
 
-
+extension ZZJPlayerSubViewController: ZZJAVPlayerSubViewDelegate {
+    
+    func selectCellWith(index: Int, URLType: Int) {
+        
+        if URLType == VariousEnums.URLType.Local.rawValue {//本地文件
+            
+        } else {//网络视频
+            
+        }
+    }
+}
 
 
 

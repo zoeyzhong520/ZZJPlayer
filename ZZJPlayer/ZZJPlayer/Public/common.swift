@@ -81,7 +81,8 @@ let bodyFont = zzj_SystemFontWithSize(16)
 ///辅助字号
 let assistFont = zzj_SystemFontWithSize(14)
 
-
+///测试视频链接
+let TestVideoURL = "http://preview.ewang.com/movie/videos/854x480b39ec8d0c97c4b7d88269e692bcdeedd.mp4"
 
 
 

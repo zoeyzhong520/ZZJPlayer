@@ -16,3 +16,9 @@ import Foundation
     ///状态/错误 提示
     @objc optional func promptPlayerStatusOrErrorWith(status: VariousEnums.ZZJAVPlayerStatus.RawValue)
 }
+
+@objc protocol ZZJAVPlayerSubViewDelegate: NSObjectProtocol {
+    
+    ///点击了cell
+    @objc optional func selectCellWith(index: Int, URLType: VariousEnums.URLType.RawValue)
+}
