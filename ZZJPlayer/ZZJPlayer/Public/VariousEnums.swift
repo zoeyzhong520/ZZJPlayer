@@ -9,10 +9,6 @@
 import UIKit
 
 class VariousEnums: NSObject {
-
-    ///创建单例
-    static let shareInstance = VariousEnums()
-    private override init() {}
     
     ///ZZJAVPlayer的多种播放状态 ZZJAVPlayerStatus
     enum ZZJAVPlayerStatus: Int {
@@ -35,26 +31,13 @@ class VariousEnums: NSObject {
         ///从后台返回
         case ZZJAVPlayerStatusBecomActive
     }
+    
+    ///网址类型
+    enum URLType: Int {
+        case Local = 0
+        case Net
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

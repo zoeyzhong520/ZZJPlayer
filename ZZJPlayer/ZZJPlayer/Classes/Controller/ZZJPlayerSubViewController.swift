@@ -1,18 +1,18 @@
 //
-//  ZZJPlayerBaseViewController.swift
+//  ZZJPlayerSubViewController.swift
 //  ZZJPlayer
 //
-//  Created by ZHONG ZHAOJUN on 2018/2/19.
+//  Created by JOE on 2018/4/17.
 //  Copyright © 2018年 Hongyear Information Technology (Shanghai) Co.,Ltd. All rights reserved.
 //
 
 import UIKit
 
-class ZZJPlayerBaseViewController: UIViewController {
+class ZZJPlayerSubViewController: ZZJPlayerBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = RGB(244, 244, 244)
+        self.setPage()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,5 +32,27 @@ class ZZJPlayerBaseViewController: UIViewController {
     */
 
 }
+
+extension ZZJPlayerSubViewController {
+    
+    //MARK: UI
+    
+    fileprivate func setPage() {
+        
+        self.title = "根视图"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
