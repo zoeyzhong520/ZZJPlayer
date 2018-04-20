@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZZJPlayerBaseViewController: UIViewController {
+class ZZJAVPlayerBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

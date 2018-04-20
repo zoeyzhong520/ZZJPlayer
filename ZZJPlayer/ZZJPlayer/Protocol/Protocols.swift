@@ -22,3 +22,17 @@ import Foundation
     ///点击了cell
     @objc optional func selectCellWith(index: Int, URLType: VariousEnums.URLType.RawValue)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

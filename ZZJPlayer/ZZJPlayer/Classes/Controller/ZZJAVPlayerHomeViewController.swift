@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZZJPlayerHomeViewController: ZZJPlayerBaseViewController {
+class ZZJAVPlayerHomeViewController: ZZJAVPlayerBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class ZZJPlayerHomeViewController: ZZJPlayerBaseViewController {
 
 }
 
-extension ZZJPlayerHomeViewController {
+extension ZZJAVPlayerHomeViewController {
     
     //MARK: UI
     

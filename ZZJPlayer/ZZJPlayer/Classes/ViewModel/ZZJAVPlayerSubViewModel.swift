@@ -1,5 +1,5 @@
 //
-//  ZZJPlayerSubViewModel.swift
+//  ZZJAVPlayerSubViewModel.swift
 //  ZZJPlayer
 //
 //  Created by JOE on 2018/4/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZZJPlayerSubViewModel: NSObject {
+class ZZJAVPlayerSubViewModel: NSObject {
 
     
 }

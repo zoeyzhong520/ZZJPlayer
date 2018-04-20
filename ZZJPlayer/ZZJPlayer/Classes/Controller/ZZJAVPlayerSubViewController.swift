@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZZJPlayerSubViewController: ZZJPlayerBaseViewController {
+class ZZJAVPlayerSubViewController: ZZJAVPlayerBaseViewController {
 
     lazy var subView: ZZJAVPlayerSubView = {
         let subView = ZZJAVPlayerSubView(frame: CGRect(x: 0, y: NavigationBarHeight + StatusBarHeight, width: screenWidth, height: screenHeight - (NavigationBarHeight + StatusBarHeight)))
@@ -42,7 +42,7 @@ class ZZJPlayerSubViewController: ZZJPlayerBaseViewController {
 
 }
 
-extension ZZJPlayerSubViewController {
+extension ZZJAVPlayerSubViewController {
     
     //MARK: UI
     
@@ -60,7 +60,7 @@ extension ZZJPlayerSubViewController {
     }
 }
 
-extension ZZJPlayerSubViewController: ZZJAVPlayerSubViewDelegate {
+extension ZZJAVPlayerSubViewController: ZZJAVPlayerSubViewDelegate {
     
     func selectCellWith(index: Int, URLType: Int) {
         
