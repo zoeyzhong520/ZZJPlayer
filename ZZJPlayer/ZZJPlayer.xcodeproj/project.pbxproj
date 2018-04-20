@@ -28,7 +28,6 @@
 		D8A62E222033D44D00A14446 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62E212033D44D00A14446 /* common.swift */; };
 		D8B90A98203AEE7E00DC7446 /* ZZJAVPlayerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B90A97203AEE7E00DC7446 /* ZZJAVPlayerBaseViewController.swift */; };
 		D8B90A9A203AF05800DC7446 /* ZZJAVPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B90A99203AF05800DC7446 /* ZZJAVPlayerModel.swift */; };
-		D8B90A9E203AF0BB00DC7446 /* BaseJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D8B90A9D203AF0BB00DC7446 /* BaseJSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +75,6 @@
 		D8A62E212033D44D00A14446 /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		D8B90A97203AEE7E00DC7446 /* ZZJAVPlayerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZJAVPlayerBaseViewController.swift; sourceTree = "<group>"; };
 		D8B90A99203AF05800DC7446 /* ZZJAVPlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZJAVPlayerModel.swift; sourceTree = "<group>"; };
-		D8B90A9D203AF0BB00DC7446 /* BaseJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BaseJSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +178,6 @@
 			children = (
 				D84258982085E997000C37F7 /* 笑一笑 ~シャオイーシャオ!~ -- ももいろクローバーZ.mp4 */,
 				D84258992085E998000C37F7 /* トキトキメキメキ.mp4 */,
-				D8B90A9D203AF0BB00DC7446 /* BaseJSON.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -345,7 +342,6 @@
 				D8A62DF52033D35700A14446 /* Assets.xcassets in Resources */,
 				D842589A2085E998000C37F7 /* 笑一笑 ~シャオイーシャオ!~ -- ももいろクローバーZ.mp4 in Resources */,
 				D842589B2085E998000C37F7 /* トキトキメキメキ.mp4 in Resources */,
-				D8B90A9E203AF0BB00DC7446 /* BaseJSON.json in Resources */,
 				D8A62DF32033D35700A14446 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
