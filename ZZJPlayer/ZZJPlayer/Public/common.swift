@@ -40,12 +40,12 @@ let NavigationBarHeight = CGFloat(44)
 //MARK: - Color
 ///RGB
 let RGB: (CGFloat, CGFloat, CGFloat) -> UIColor = { r,g,b in
-    return UIColor(red: r, green: g, blue: b, alpha: 1.0)
+    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
 }
 
 ///RGBA
 let RGBA: (CGFloat, CGFloat, CGFloat, CGFloat) -> UIColor = { r,g,b,a in
-    return UIColor(red: r, green: g, blue: b, alpha: a)
+    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
 }
 
 ///根据色值生成颜色(无透明度)(格式为0xffffff)
@@ -82,7 +82,10 @@ let bodyFont = zzj_SystemFontWithSize(16)
 let assistFont = zzj_SystemFontWithSize(14)
 
 ///测试视频链接
-let TestVideoURL = "http://preview.ewang.com/movie/videos/854x480b39ec8d0c97c4b7d88269e692bcdeedd.mp4"
+let NetVideoURL = "http://preview.ewang.com/movie/videos/854x480b39ec8d0c97c4b7d88269e692bcdeedd.mp4"
+
+///PlayerView frame
+let PlayerViewFrame = CGRect(x: 0, y: NavigationBarHeight + StatusBarHeight, width: screenWidth, height: screenWidth * 0.618)
 
 
 

@@ -10,27 +10,30 @@ import UIKit
 
 class ZZJAVPlayerHomeViewController: ZZJAVPlayerBaseViewController {
 
+    ///URLType
+    var URLType: VariousEnums.URLType?
+    
+    ///url
+    var url: String?
+    
+    ///playerView
+    var playerView: ZZJAVPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setPage()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.playerView.pause()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ZZJAVPlayerHomeViewController {
@@ -39,7 +42,14 @@ extension ZZJAVPlayerHomeViewController {
     
     fileprivate func setPage() {
         
-        self.title = "首页"
+        self.title = self.url?.fileNameForPath()
+        
+        self.setPlayerView()
+    }
+    
+    fileprivate func setPlayerView() {
+        
+        self.playerView = ZZJAVPlayerSubViewModel.buildPlayerViewWith(frame: PlayerViewFrame, url: url!, URLType: self.URLType!, view: self.view, object: self)
     }
 }
 

@@ -20,7 +20,7 @@ import Foundation
 @objc protocol ZZJAVPlayerSubViewDelegate: NSObjectProtocol {
     
     ///点击了cell
-    @objc optional func selectCellWith(index: Int, URLType: VariousEnums.URLType.RawValue)
+    @objc optional func selectCellWith(URLType: VariousEnums.URLType.RawValue, url: String)
 }
 
 

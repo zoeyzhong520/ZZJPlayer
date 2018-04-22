@@ -23,7 +23,7 @@ class ZZJAVPlayerSubViewTableViewCell: UITableViewCell {
             view.removeFromSuperview()
         }
         
-        let titleLabel = UILabel(frame: self.contentView.bounds)
+        let titleLabel = UILabel(frame: CGRect(x: 20, y: 0, width: self.contentView.bounds.size.width - 20*2, height: self.contentView.bounds.size.height))
         titleLabel.text = self.titleStr
         titleLabel.textAlignment = .left
         titleLabel.font = zzj_SystemFontWithSize(14)

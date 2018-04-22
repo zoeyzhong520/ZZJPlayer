@@ -28,17 +28,6 @@ class ZZJAVPlayerSubViewController: ZZJAVPlayerBaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -48,7 +37,7 @@ extension ZZJAVPlayerSubViewController {
     
     fileprivate func setPage() {
         
-        self.title = "根视图"
+        self.title = "播放列表"
         self.addSubView()
     }
     
@@ -56,19 +45,22 @@ extension ZZJAVPlayerSubViewController {
     fileprivate func addSubView() {
         
         self.view.addSubview(self.subView)
-        self.subView.model = ZZJAVPlayerModel.configModel(localVideoURLArray: ["笑一笑 ~シャオイーシャオ!~ -- ももいろクローバーZ", "トキトキメキメキ"], netVideoURLArray: [TestVideoURL])
+        
+        let bundlePath1 = ZZJAVPlayerSubViewModel.bundlePathWith(forResource: "笑一笑 ~シャオイーシャオ!~ -- ももいろクローバーZ", ofType: "mp4")
+        let bundlePath2 = ZZJAVPlayerSubViewModel.bundlePathWith(forResource: "トキトキメキメキ", ofType: "mp4")
+        
+        self.subView.model = ZZJAVPlayerModel.configModel(localVideoURLArray: [bundlePath1, bundlePath2], netVideoURLArray: [NetVideoURL])
     }
 }
 
 extension ZZJAVPlayerSubViewController: ZZJAVPlayerSubViewDelegate {
     
-    func selectCellWith(index: Int, URLType: Int) {
+    func selectCellWith(URLType: Int, url: String) {
         
-        if URLType == VariousEnums.URLType.Local.rawValue {//本地文件
-            
-        } else {//网络视频
-            
-        }
+        let vc = ZZJAVPlayerHomeViewController()
+        vc.URLType = VariousEnums.URLType(rawValue: URLType)
+        vc.url = url
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

@@ -93,9 +93,9 @@ extension ZZJAVPlayerSubView: UITableViewDelegate, UITableViewDataSource {
         
         var titleStr:String?
         if indexPath.section == 0 {
-            titleStr = self.model?.localVideoURLArray?[indexPath.row]
+            titleStr = self.model?.localVideoURLArray?[indexPath.row]?.fileNameForPath()
         } else {
-            titleStr = self.model?.netVideoURLArray?[indexPath.row]
+            titleStr = self.model?.netVideoURLArray?[indexPath.row]?.fileNameForPath()
         }
         
         let cell = ZZJAVPlayerSubViewTableViewCell.createCellFor(tableView: tableView, AtIndexPath: indexPath, titleStr: titleStr)
@@ -108,8 +108,10 @@ extension ZZJAVPlayerSubView: UITableViewDelegate, UITableViewDataSource {
         
         let URLType = indexPath.section == 0 ? VariousEnums.URLType.Local.rawValue : VariousEnums.URLType.Net.rawValue
         
+        let url = indexPath.section == 0 ? self.model?.localVideoURLArray?[indexPath.row] : self.model?.netVideoURLArray?[indexPath.row]
+        
         if self.delegate != nil {
-            self.delegate?.selectCellWith!(index: indexPath.row, URLType: URLType) //调用代理方法
+            self.delegate?.selectCellWith!(URLType: URLType, url: url ?? "") //调用代理方法
         }
     }
 }
