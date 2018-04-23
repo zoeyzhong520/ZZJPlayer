@@ -188,7 +188,7 @@ extension ZZJAVPlayer {
     }
     
     ///播放状态代理调用
-    func useDelegateWith(status: VariousEnums.ZZJAVPlayerStatus) {
+    fileprivate func useDelegateWith(status: VariousEnums.ZZJAVPlayerStatus) {
         
         if self.isCanPlay == false {
             return
@@ -209,7 +209,7 @@ extension ZZJAVPlayer {
     /// - Parameters:
     ///   - videoURL: 视频网址
     ///   - URLType: 网址类型
-    func getPlayerItem(videoURL: String, URLType: VariousEnums.URLType) -> AVPlayerItem {
+    fileprivate func getPlayerItem(videoURL: String, URLType: VariousEnums.URLType) -> AVPlayerItem {
         
         var url: URL!
         
@@ -228,7 +228,7 @@ extension ZZJAVPlayer {
     /// - Parameters:
     ///   - videoURL: 视频网址
     ///   - URLType: 网址类型
-    func creatPlayer(videoURL: String, URLType: VariousEnums.URLType) {
+    fileprivate func creatPlayer(videoURL: String, URLType: VariousEnums.URLType) {
         
         if self.player == nil {
             
@@ -253,7 +253,7 @@ extension ZZJAVPlayer {
      AVLayerVideoGravityResizeAspect,  // 等比例填充，直到一个维度到达区域边界
      AVLayerVideoGravityResizeAspectFill, // 等比例填充，直到填充满整个视图区域，其中一个维度的部分区域会被裁剪
      */
-    func creatPlayerLayer() {
+    fileprivate func creatPlayerLayer() {
         
         let layer = AVPlayerLayer(player: self.player)
         layer.frame = self.bounds
@@ -268,7 +268,7 @@ extension ZZJAVPlayer {
     //MARK: 添加 监控
     
     ///给player 添加 time observer
-    func addPlayerObserver() {
+    fileprivate func addPlayerObserver() {
         
         self.timeObser = self.player.addPeriodicTimeObserver(forInterval: CMTimeMake(Int64(1.0), Int32(1.0)), queue: DispatchQueue.main, using: { (time) in
             
@@ -295,7 +295,7 @@ extension ZZJAVPlayer {
     }
     
     ///移除 time observer
-    func removePlayerObserver() {
+    fileprivate func removePlayerObserver() {
         
         self.player.removeTimeObserver(self.timeObser)
     }
@@ -309,7 +309,7 @@ extension ZZJAVPlayer {
      playbackLikelyToKeepUp : seekToTime后,可以正常播放，相当于readyToPlay，一般拖动滑竿菊花转，到了这个这个状态菊花隐藏
      
      */
-    func addObserverWithPlayItem(item: AVPlayerItem) {
+    fileprivate func addObserverWithPlayItem(item: AVPlayerItem) {
         
         item.addObserver(self, forKeyPath: "status", options: .new, context: nil)
         item.addObserver(self, forKeyPath: "loadedTimeRanges", options: .new, context: nil)
@@ -318,7 +318,7 @@ extension ZZJAVPlayer {
     }
     
     ///移除 item 的 observer
-    func removeObserverWithPlayItem(item: AVPlayerItem) {
+    fileprivate func removeObserverWithPlayItem(item: AVPlayerItem) {
         
         item.removeObserver(self, forKeyPath: "status")
         item.removeObserver(self, forKeyPath: "loadedTimeRanges")
@@ -361,7 +361,7 @@ extension ZZJAVPlayer {
      AVPlayerItemStatusReadyToPlay       准备好播放
      AVPlayerItemStatusFailed            播放出错
      */
-    func handleStatusWithPlayerItem(item: AVPlayerItem) {
+    fileprivate func handleStatusWithPlayerItem(item: AVPlayerItem) {
         
         switch item.status {
         case .readyToPlay: // 准备好播放
@@ -377,7 +377,7 @@ extension ZZJAVPlayer {
     }
     
     ///处理缓冲进度
-    func handleLoadedTimeRangesWithPlayerItem(item: AVPlayerItem) {
+    fileprivate func handleLoadedTimeRangesWithPlayerItem(item: AVPlayerItem) {
         
         let loadArray = item.loadedTimeRanges
         
@@ -406,7 +406,7 @@ extension ZZJAVPlayer {
      UIApplicationDidBecomeActiveNotification     返回前台
      
      */
-    func addNotificatonForPlayer() {
+    fileprivate func addNotificatonForPlayer() {
         
         let center = NotificationCenter.default
         
@@ -417,7 +417,7 @@ extension ZZJAVPlayer {
     }
     
     ///移除 通知
-    func removeNotification() {
+    fileprivate func removeNotification() {
         
         let center = NotificationCenter.default
         
@@ -428,7 +428,7 @@ extension ZZJAVPlayer {
     }
     
     ///视频播放结束
-    @objc func videoPlayEnd() {
+    @objc fileprivate func videoPlayEnd() {
         
         print("视频播放结束")
         
@@ -437,7 +437,7 @@ extension ZZJAVPlayer {
     }
     
     ///视频异常中断
-    @objc func videoPlayError() {
+    @objc fileprivate func videoPlayError() {
         
         print("视频异常中断")
         
@@ -445,7 +445,7 @@ extension ZZJAVPlayer {
     }
     
     ///进入后台
-    @objc func videoPlayEnterBack() {
+    @objc fileprivate func videoPlayEnterBack() {
         
         print("进入后台")
         
@@ -453,7 +453,7 @@ extension ZZJAVPlayer {
     }
     
     ///返回前台
-    @objc func videoPlayBecomeActive() {
+    @objc fileprivate func videoPlayBecomeActive() {
         
         print("返回前台")
         
